@@ -23,12 +23,13 @@ class ApplicationState extends ChangeNotifier {
   }
 
   Future<void> init() async {
-    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+    await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform);
 
     FirebaseUIAuth.configureProviders([
       EmailAuthProvider(),
     ]);
-    
+
     FirebaseAuth.instance.userChanges().listen((user) {
       if (user != null) {
         _loggedIn = true;
@@ -59,16 +60,16 @@ class ApplicationState extends ChangeNotifier {
 
   Future<DocumentReference> addMessageToGuestBook(String message) {
     if (!_loggedIn) {
-      throw Exception('Must be logged in');
+      throw Exception('Se ha logeado con exito');
     }
 
     return FirebaseFirestore.instance
         .collection('guestbook')
         .add(<String, dynamic>{
-          'text': message,
-          'timestamp': DateTime.now().millisecondsSinceEpoch,
-          'name': FirebaseAuth.instance.currentUser!.displayName,
-          'userId': FirebaseAuth.instance.currentUser!.uid,
-        });
+      'text': message,
+      'timestamp': DateTime.now().millisecondsSinceEpoch,
+      'name': FirebaseAuth.instance.currentUser!.displayName,
+      'userId': FirebaseAuth.instance.currentUser!.uid,
+    });
   }
 }

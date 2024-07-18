@@ -17,14 +17,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Firebase Meetup'),
+        title: const Text('Ubicacion APP'),
       ),
       body: ListView(
         children: <Widget>[
-          Image.asset('assets/codelab.png'),
+          Image.asset('assets/UBICACION.png'),
           const SizedBox(height: 8),
-          const IconAndDetail(Icons.calendar_today, 'October 30'),
-          const IconAndDetail(Icons.location_city, 'San Francisco'),
+          //const IconAndDetail(Icons.calendar_today, 'October 30'),
+          //const IconAndDetail(Icons.location_city, 'San Francisco'),
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
               loggedIn: appState.loggedIn,
@@ -40,9 +40,9 @@ class HomePage extends StatelessWidget {
             endIndent: 8,
             color: Colors.grey,
           ),
-          const Header("What we'll be doing"),
+          const Header("Prueba 2 (SEGUNDO BIMESTRE) "),
           const Paragraph(
-            'Join us for a day full of Firebase Workshops and Pizza!',
+            'Bienvenidos a la Aplicacion UBI!!',
           ),
           Consumer<ApplicationState>(
             builder: (context, appState, _) => Column(
@@ -50,11 +50,11 @@ class HomePage extends StatelessWidget {
               children: [
                 if (appState.loggedIn) ...[
                   const Header('Discussion'),
-                  GuestBook(
+                  /*GuestBook(
                     messages: appState.guestBookMessages,
                     addMessage: (message) =>
                         appState.addMessageToGuestBook(message),
-                  ),
+                  ),*/
                 ],
               ],
             ),

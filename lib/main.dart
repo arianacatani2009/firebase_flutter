@@ -51,10 +51,11 @@ final _router = GoRouter(
                     user.sendEmailVerification();
                     const snackBar = SnackBar(
                         content: Text(
-                            'Please check your email to verify your email address'));
+                            'Por favor revise su correo electrónico para verificar su dirección de correo electrónico.'));
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
-                  context.pushReplacement('/gps'); // Redirige a la pantalla de GPS
+                  context
+                      .pushReplacement('/gps'); // Redirige a la pantalla de GPS
                 }),
               ],
             );
@@ -87,7 +88,8 @@ final _router = GoRouter(
         ),
         GoRoute(
           path: 'gps',
-          builder: (context, state) => GPSHomePage(), // Nueva ruta para la pantalla de GPS
+          builder: (context, state) =>
+              GPSHomePage(), // Nueva ruta para la pantalla de GPS
         ),
       ],
     ),
@@ -100,7 +102,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Firebase Meetup',
+      title: 'Ubicacion APP',
       theme: ThemeData(
         buttonTheme: Theme.of(context).buttonTheme.copyWith(
               highlightColor: Colors.deepPurple,

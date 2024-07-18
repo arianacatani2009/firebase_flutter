@@ -16,7 +16,7 @@ class _GPSHomePageState extends State<GPSHomePage> {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
     }
-    
+
     if (permission == LocationPermission.deniedForever) {
       setState(() {
         _locationMessage = "Location permissions are permanently denied.";
@@ -29,7 +29,8 @@ class _GPSHomePageState extends State<GPSHomePage> {
     );
 
     setState(() {
-      _locationMessage = "Lat: ${position.latitude}, Long: ${position.longitude}";
+      _locationMessage =
+          "Lat: ${position.latitude}, Long: ${position.longitude}";
     });
   }
 

@@ -9,8 +9,8 @@ import 'src/widgets.dart';
 
 class GuestBook extends StatefulWidget {
   const GuestBook({
-    Key? key, 
-    required this.addMessage, 
+    Key? key,
+    required this.addMessage,
     required this.messages,
   }) : super(key: key);
 
