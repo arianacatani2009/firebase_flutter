@@ -1,27 +1,20 @@
-// Copyright 2022 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';               // new
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';                 // new
-
-import 'app_state.dart';                                 // new
+import 'package:provider/provider.dart';
+import 'app_state.dart';
 import 'home_page.dart';
+import 'gps_home_page.dart'; // Importa la nueva pantalla
 
 void main() {
-  // Modify from here...
   WidgetsFlutterBinding.ensureInitialized();
-
   runApp(ChangeNotifierProvider(
     create: (context) => ApplicationState(),
-    builder: ((context, child) => const App()),
+    builder: (context, child) => const App(),
   ));
-  // ...to here.
 }
-// Add GoRouter configuration outside the App class
+
 final _router = GoRouter(
   routes: [
     GoRoute(
@@ -33,7 +26,7 @@ final _router = GoRouter(
           builder: (context, state) {
             return SignInScreen(
               actions: [
-                ForgotPasswordAction(((context, email) {
+                ForgotPasswordAction((context, email) {
                   final uri = Uri(
                     path: '/sign-in/forgot-password',
                     queryParameters: <String, String?>{
@@ -41,8 +34,8 @@ final _router = GoRouter(
                     },
                   );
                   context.push(uri.toString());
-                })),
-                AuthStateChangeAction(((context, state) {
+                }),
+                AuthStateChangeAction((context, state) {
                   final user = switch (state) {
                     SignedIn state => state.user,
                     UserCreated state => state.credential.user,
@@ -61,8 +54,8 @@ final _router = GoRouter(
                             'Please check your email to verify your email address'));
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
-                  context.pushReplacement('/');
-                })),
+                  context.pushReplacement('/gps'); // Redirige a la pantalla de GPS
+                }),
               ],
             );
           },
@@ -92,13 +85,15 @@ final _router = GoRouter(
             );
           },
         ),
+        GoRoute(
+          path: 'gps',
+          builder: (context, state) => GPSHomePage(), // Nueva ruta para la pantalla de GPS
+        ),
       ],
     ),
   ],
 );
-// end of GoRouter configuration
 
-// Change MaterialApp to MaterialApp.router and add the routerConfig
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -117,7 +112,7 @@ class App extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: true,
       ),
-      routerConfig: _router, // new
+      routerConfig: _router,
     );
   }
 }
