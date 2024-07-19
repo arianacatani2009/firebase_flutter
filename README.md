@@ -1,4 +1,7 @@
-  Inicio de la aplicacion donde nos muestra el boton de iniciar sesion
+ Inicio de la aplicacion 
+ ![image](https://github.com/user-attachments/assets/8c8997db-ab3f-45b6-bc36-f6d19487a7c3)
+
+  boton de iniciar sesion
   [image](https://github.com/user-attachments/assets/1e453415-74f9-44b1-9111-e942a0251f71)
   
   Iniciar sesion o registrarse 
