@@ -5,6 +5,12 @@
   boton de iniciar sesion
 ![image](https://github.com/user-attachments/assets/6095e69b-0c55-4707-8dd4-68cd5daf08de)
 
+
+Mostrar ubicacion 
+![image](https://github.com/user-attachments/assets/20e43751-dff2-46a2-be5c-e30c8d6750a0)
+regresar para ver perfil o cerrar sesion
+![image](https://github.com/user-attachments/assets/6b5684eb-25cd-4894-ab07-2d6b0ec23612)
+
   
   Iniciar sesion o registrarse 
   ![image](https://github.com/user-attachments/assets/2e6153e1-9f12-454d-99db-9e6b1601091f)
