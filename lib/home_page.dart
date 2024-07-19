@@ -1,10 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart'
-    hide EmailAuthProvider, PhoneAuthProvider;
+import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider, PhoneAuthProvider;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'app_state.dart';
-import 'guest_book.dart'; // Importa el widget GuestBook
 import 'src/authentication.dart';
 import 'src/widgets.dart';
 
@@ -15,54 +13,37 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ubicacion APP'),
+        title: const Text(
+          'Tu Guía de Ubicación',
+          style: TextStyle(
+            color: Color.fromARGB(255, 227, 235, 236), // Color llamativo
+            fontWeight: FontWeight.bold, // Texto en negrita
+            fontSize: 22, // Tamaño de la fuente
+          ),
+        ),
+        backgroundColor: Colors.deepPurple, // Color de fondo de la AppBar
       ),
       body: Center(
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
+            const Center(child: Header("Bienvenido a UBICATE APP")),
             Center(
               child: Image.asset(
                 'assets/UBICACION.png',
-                width: 100, // Cambia este valor según el tamaño deseado
-                height: 100, // Cambia este valor según el tamaño deseado
+                width: 350, // Cambia este valor según el tamaño deseado
+                height: 350, // Cambia este valor según el tamaño deseado
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 4),
             Consumer<ApplicationState>(
-              builder: (context, appState, _) => AuthFunc(
-                loggedIn: appState.loggedIn,
-                signOut: () {
-                  FirebaseAuth.instance.signOut();
-                },
-              ),
-            ),
-            const Divider(
-              height: 8,
-              thickness: 1,
-              indent: 8,
-              endIndent: 8,
-              color: Colors.grey,
-            ),
-            const Center(child: Header("Prueba 2 (SEGUNDO BIMESTRE) ")),
-            const Center(
-              child: Paragraph(
-                'Bienvenidos a la Aplicacion UBI!!',
-              ),
-            ),
-            Consumer<ApplicationState>(
-              builder: (context, appState, _) => Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  if (appState.loggedIn) ...[
-                    // const Header('Discussion'),
-                    /*GuestBook(
-                      messages: appState.guestBookMessages,
-                      addMessage: (message) =>
-                          appState.addMessageToGuestBook(message),
-                    ),*/
-                  ],
-                ],
+              builder: (context, appState, _) => Center(
+                child: AuthFunc(
+                  loggedIn: appState.loggedIn,
+                  signOut: () {
+                    FirebaseAuth.instance.signOut();
+                  },
+                ),
               ),
             ),
           ],

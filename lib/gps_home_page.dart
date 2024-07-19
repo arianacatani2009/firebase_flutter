@@ -38,14 +38,14 @@ class _GPSHomePageState extends State<GPSHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GPS Example'),
+        title: Text('GPS '),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Your Location:',
+              'Tu ubicación :',
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 20),
@@ -56,7 +56,7 @@ class _GPSHomePageState extends State<GPSHomePage> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _getCurrentLocation,
-              child: Text('Get Current Location'),
+              child: Text('Buscar Ubicación'),
             ),
           ],
         ),

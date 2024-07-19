@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'app_state.dart';
 import 'home_page.dart';
-import 'gps_home_page.dart'; // Importa la nueva pantalla
+import 'gps_home_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,8 +55,7 @@ final _router = GoRouter(
                             'Por favor revise su correo electrónico para verificar su dirección de correo electrónico.'));
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
-                  context
-                      .pushReplacement('/gps'); // Redirige a la pantalla de GPS
+                  context.pushReplacement('/gps'); // Redirige a la pantalla de GPS
                 }),
               ],
             );
@@ -89,8 +88,7 @@ final _router = GoRouter(
         ),
         GoRoute(
           path: 'gps',
-          builder: (context, state) =>
-              GPSHomePage(), // Nueva ruta para la pantalla de GPS
+          builder: (context, state) => GPSHomePage(), // Nueva ruta para la pantalla de GPS
         ),
       ],
     ),
