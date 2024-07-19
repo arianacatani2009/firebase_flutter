@@ -2,7 +2,7 @@ PROYECTO UBICACIÓN APP
 Versión: 1.123.434
 
 Deploy en la web: https://flutter-525bc.web.app/
-
+apk: adjunta en el repositorio llamada base.apk
 Descripción
 Aplicación de ubicación que utiliza Flutter, Firebase y Geolocator para proporcionar servicios de geolocalización precisos y gestión de perfiles de usuario. Implementada con autenticación segura y navegación eficiente.
 
