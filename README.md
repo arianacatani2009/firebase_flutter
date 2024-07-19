@@ -1,8 +1,10 @@
  Inicio de la aplicacion 
- ![image](https://github.com/user-attachments/assets/8c8997db-ab3f-45b6-bc36-f6d19487a7c3)
+![image](https://github.com/user-attachments/assets/6a4c459f-5085-4525-a182-8f2d73262aeb)
+
 
   boton de iniciar sesion
-  [image](https://github.com/user-attachments/assets/1e453415-74f9-44b1-9111-e942a0251f71)
+![image](https://github.com/user-attachments/assets/6095e69b-0c55-4707-8dd4-68cd5daf08de)
+
   
   Iniciar sesion o registrarse 
   ![image](https://github.com/user-attachments/assets/2e6153e1-9f12-454d-99db-9e6b1601091f)
