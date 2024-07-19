@@ -36,11 +36,12 @@ final _router = GoRouter(
                   context.push(uri.toString());
                 }),
                 AuthStateChangeAction((context, state) {
-                  final user = switch (state) {
-                    SignedIn state => state.user,
-                    UserCreated state => state.credential.user,
-                    _ => null
-                  };
+                  final user = state is SignedIn
+                      ? state.user
+                      : state is UserCreated
+                          ? state.credential.user
+                          : null;
+
                   if (user == null) {
                     return;
                   }
