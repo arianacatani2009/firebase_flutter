@@ -1,21 +1,43 @@
  Inicio de la aplicacion 
+
+ 
 ![image](https://github.com/user-attachments/assets/6a4c459f-5085-4525-a182-8f2d73262aeb)
 
 
+
   boton de iniciar sesion
+
+  
 ![image](https://github.com/user-attachments/assets/6095e69b-0c55-4707-8dd4-68cd5daf08de)
 
 
 Mostrar ubicacion 
+
+
 ![image](https://github.com/user-attachments/assets/20e43751-dff2-46a2-be5c-e30c8d6750a0)
+
+
 regresar para ver perfil o cerrar sesion
+
+
 ![image](https://github.com/user-attachments/assets/6b5684eb-25cd-4894-ab07-2d6b0ec23612)
 
   
-  Iniciar sesion o registrarse 
-  ![image](https://github.com/user-attachments/assets/2e6153e1-9f12-454d-99db-9e6b1601091f)
+  Pantalla perfil para validacion de correo, borrar cuenta o cerrar sesion 
+![image](https://github.com/user-attachments/assets/83369815-4c2e-44a5-a501-6a4b00871be5)
+
   
+  
+  Pantalla para registrarse 
+
+  
+![image](https://github.com/user-attachments/assets/cb32a868-a6be-4ad0-99fe-88539ca07d74)
+
+
+
   Registro en caso de no tener una cuenta registrada
+
+  
   ![image](https://github.com/user-attachments/assets/3c6cb10e-3764-4b82-a3f2-311471007acb)
   
   Nos registramos y podemos presionar el boton que muestre nuestra ubicacion
